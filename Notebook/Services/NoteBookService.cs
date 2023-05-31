@@ -12,11 +12,7 @@ namespace Notebook.Services
 
         public NoteBookService(NoteContext context)
         {
-            notes = new List<Note>()
-            { new Note {Id = 1, Title ="Appoitment", Description ="Dentist on 10.06.2023 at 10:00 a.m."},
-              new Note {Id = 2, Title = "Meeting", Description= "Customer on 5.06.2023 at 9:00 a.m."},
-              new Note {Id = 3, Title = "Party", Description = "Bday Party on 1.06.2023 at 5:00 p.m."}
-            };
+            context = _context;
         }
 
         public async void Add(Note note)
